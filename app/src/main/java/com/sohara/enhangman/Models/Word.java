@@ -1,4 +1,4 @@
-package com.sohara.hangman.Models;
+package com.sohara.enhangman.Models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

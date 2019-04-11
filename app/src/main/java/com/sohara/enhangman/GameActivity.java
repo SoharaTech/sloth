@@ -1,4 +1,4 @@
-package com.sohara.hangman;
+package com.sohara.enhangman;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -31,10 +31,10 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
-import com.sohara.hangman.Helper.PersianNumber;
-import com.sohara.hangman.Helper.Utils;
-import com.sohara.hangman.Models.PrepareWord;
-import com.sohara.hangman.Models.Word;
+import com.sohara.enhangman.Helper.PersianNumber;
+import com.sohara.enhangman.Helper.Utils;
+import com.sohara.enhangman.Models.PrepareWord;
+import com.sohara.enhangman.Models.Word;
 
 import java.util.Arrays;
 import java.util.List;
@@ -92,7 +92,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void checkLetter(String letter, boolean isHint) {
-        Log.i(TAG, "checkLetter: word " + word);
         int i = -1;
         for (; ; ) {
             i = word.indexOf(letter, i + 1);
@@ -138,7 +137,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         counter += 1;
         displayHangman(counter);
-        Log.i(TAG, "checkLetter: display hangman " + counter);
         if (!sound) {
             return;
         }
@@ -233,7 +231,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void hideLetter(String paramString) {
-        Log.i(TAG, "hideLetter: keyboard ");
         boolean found = false;
         for (int j = 0; j < keyboard.getChildCount(); j++) {
 
@@ -241,7 +238,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 LinearLayout row = (LinearLayout) keyboard.getChildAt(j);
                 for (int i = 0; i < row.getChildCount(); i++) {
                     if (row.getChildAt(i) instanceof Button && ((Button) row.getChildAt(i)).getText().toString().equals(paramString)) {
-                        Log.i(TAG, "hideLetter: " + ((Button) row.getChildAt(i)).getText());
                         row.getChildAt(i).setEnabled(false);
                         row.getChildAt(i).setBackgroundResource(R.drawable.keyboard_off);
                         found = true;
@@ -435,14 +431,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        selectedLanguage = getSharedPreferences("StartActivity", MODE_PRIVATE).getString("language", StartActivity.language[1]);
-        if (selectedLanguage.equals(StartActivity.language[1])) {
-//            Utils.forceRtlIfSupported(this);
-            Utils.changeLocale(this, StartActivity.languageCodes[1]);
-        } else {
-//            Utils.forceLtrIfSupported(this);
-            Utils.changeLocale(this, StartActivity.languageCodes[0]);
-        }
+        selectedLanguage = getSharedPreferences("StartActivity", MODE_PRIVATE).getString("language", StartActivity.language[0]);
+//        if (selectedLanguage.equals(StartActivity.language[1])) {
+////            Utils.forceRtlIfSupported(this);
+//            Utils.changeLocale(this, StartActivity.languageCodes[1]);
+//        } else {
+////            Utils.forceLtrIfSupported(this);
+//            Utils.changeLocale(this, StartActivity.languageCodes[0]);
+//        }
         Utils.forceLtrIfSupported(this);
         setContentView(R.layout.activity_game);
 

@@ -1,4 +1,4 @@
-package com.sohara.hangman.Helper;
+package com.sohara.enhangman.Helper;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +13,7 @@ public class Utils {
 
     public static String font1 = "Roboto_Mono/RobotoMono-Medium.ttf";
     public static String font2 = "Amatic/AmaticSC-Bold.ttf";
+    public static String font3 = "aclonica/Aclonica.ttf";
 
     public static int getStringResourceID(Context mContext , String param)
     {

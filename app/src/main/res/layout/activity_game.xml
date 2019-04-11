@@ -18,7 +18,7 @@
         <LinearLayout
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="25.0"
+            android:layout_weight="20"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -39,20 +39,20 @@
                 android:textColor="#ffffffff" />
         </LinearLayout>
 
-        <com.sohara.hangman.CustomViews.CustomTextView
+        <com.sohara.enhangman.CustomViews.CustomTextView
             android:id="@+id/tvCategory"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="50.0"
+            android:layout_weight="60.0"
             android:gravity="center_horizontal"
             android:tag="2"
             android:textColor="#ffffffff"
-            android:textSize="24.0sp" />
+            android:textSize="16dp" />
 
         <LinearLayout
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="25.0"
+            android:layout_weight="20"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -112,7 +112,7 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
-        <com.sohara.hangman.CustomViews.CustomButton
+        <com.sohara.enhangman.CustomViews.CustomButton
             android:id="@+id/bHint"
             android:layout_width="82dip"
             android:layout_height="32dip"
@@ -122,10 +122,10 @@
             android:tag="2"
             android:text="@string/hint"
             android:textColor="@android:color/black"
-            android:textSize="16dp"
+            android:textSize="14dp"
             android:textStyle="bold" />
 
-        <com.sohara.hangman.CustomViews.CustomButton
+        <com.sohara.enhangman.CustomViews.CustomButton
             android:id="@+id/bTranslate"
             android:layout_width="82dp"
             android:layout_height="32dp"
@@ -137,10 +137,10 @@
             android:textColor="@android:color/black"
             android:textSize="16dp"
             android:textStyle="bold"
-            android:visibility="visible" />
+            android:visibility="gone" />
     </RelativeLayout>
 
-    <com.sohara.hangman.CustomViews.CustomTextView
+    <com.sohara.enhangman.CustomViews.CustomTextView
         android:id="@+id/tvWord"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

@@ -1,16 +1,16 @@
-package com.sohara.hangman.Helper;
+package com.sohara.enhangman.Helper;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.sohara.hangman.StartActivity;
+import com.sohara.enhangman.StartActivity;
 
 public class PersianNumber {
     String language;
     public PersianNumber(Context context)
     {
         SharedPreferences prefs = context.getSharedPreferences("StartActivity" , Context.MODE_PRIVATE);
-        language = prefs.getString("language" , StartActivity.language[1]);
+        language = prefs.getString("language" , StartActivity.language[0]);
     }
     private static String[] persianNumbers = new String[]{"۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"};
 

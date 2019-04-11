@@ -1,10 +1,10 @@
-package com.sohara.hangman.Models;
+package com.sohara.enhangman.Models;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.sohara.hangman.Data.DatabaseHelper;
-import com.sohara.hangman.StartActivity;
+import com.sohara.enhangman.Data.DatabaseHelper;
+import com.sohara.enhangman.StartActivity;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -39,7 +39,7 @@ public class PrepareWord {
     {
         SharedPreferences prefs = context.getSharedPreferences("StartActivity" , MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        String language = prefs.getString("language", StartActivity.language[1]);
+        String language = prefs.getString("language", StartActivity.language[0]);
         editor.putString("random_language" , language).apply();
         if(language.equals(StartActivity.language[0]))
             return word.word;
@@ -63,7 +63,7 @@ public class PrepareWord {
     {
         SharedPreferences prefs = context.getSharedPreferences("StartActivity" , MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        String language = prefs.getString("language", StartActivity.language[1]);
+        String language = prefs.getString("language", StartActivity.language[0]);
         editor.putString("random_language" , language).apply();
         if(language.equals(StartActivity.language[0]))
             return word.meaning;

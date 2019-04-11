@@ -1,4 +1,4 @@
-package com.sohara.hangman;
+package com.sohara.enhangman;
 
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
@@ -17,11 +17,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.sohara.hangman.Data.DataContract;
-import com.sohara.hangman.Helper.PersianNumber;
-import com.sohara.hangman.Helper.Utils;
-import com.sohara.hangman.Models.PrepareWord;
-import com.sohara.hangman.Models.Word;
+import com.sohara.enhangman.Data.DataContract;
+import com.sohara.enhangman.Helper.PersianNumber;
+import com.sohara.enhangman.Helper.Utils;
+import com.sohara.enhangman.Models.PrepareWord;
+import com.sohara.enhangman.Models.Word;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -84,12 +84,12 @@ public class FinishActivity
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        selectedLanguage = getSharedPreferences("StartActivity", MODE_PRIVATE).getString("language", StartActivity.language[1]);
-        if (selectedLanguage.equals(StartActivity.language[1])) {
-            Utils.changeLocale(this, StartActivity.languageCodes[1]);
-        } else {
-            Utils.changeLocale(this, StartActivity.languageCodes[0]);
-        }
+        selectedLanguage = getSharedPreferences("StartActivity", MODE_PRIVATE).getString("language", StartActivity.language[0]);
+//        if (selectedLanguage.equals(StartActivity.language[1])) {
+//            Utils.changeLocale(this, StartActivity.languageCodes[1]);
+//        } else {
+//            Utils.changeLocale(this, StartActivity.languageCodes[0]);
+//        }
         Utils.forceLtrIfSupported(this);
         setContentView(R.layout.activity_finish);
         Intent intent = getIntent();

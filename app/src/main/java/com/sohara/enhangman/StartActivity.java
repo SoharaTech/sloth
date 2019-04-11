@@ -1,4 +1,4 @@
-package com.sohara.hangman;
+package com.sohara.enhangman;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -24,10 +24,10 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.sohara.hangman.Data.DataContract;
-import com.sohara.hangman.Data.DatabaseHelper;
-import com.sohara.hangman.Helper.PersianNumber;
-import com.sohara.hangman.Helper.Utils;
+import com.sohara.enhangman.Data.DataContract;
+import com.sohara.enhangman.Data.DatabaseHelper;
+import com.sohara.enhangman.Helper.PersianNumber;
+import com.sohara.enhangman.Helper.Utils;
 
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -140,7 +140,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void applyLanguage(int position) {
-        String beforeLanguage = getSharedPreferences("StartActivity", MODE_PRIVATE).getString("language", language[1]);
+        String beforeLanguage = getSharedPreferences("StartActivity", MODE_PRIVATE).getString("language", language[0]);
         editor = getSharedPreferences("StartActivity", MODE_PRIVATE).edit();
         editor.putString("language", language[position]);
         editor.apply();
@@ -197,22 +197,17 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String currentLanguage = getSharedPreferences("StartActivity", MODE_PRIVATE).getString("language", language[1]);
-        if (currentLanguage.equals(language[1])) {
-            Utils.changeLocale(this, languageCodes[1]);
-            currentResources = Utils.getLocalizedResources(this , languageCodes[1]);
-        } else {
-            Utils.changeLocale(this, languageCodes[0]);
+        String currentLanguage = getSharedPreferences("StartActivity", MODE_PRIVATE).getString("language", language[0]);
+//        if (currentLanguage.equals(language[1])) {
+//            Utils.changeLocale(this, languageCodes[1]);
+//            currentResources = Utils.getLocalizedResources(this , languageCodes[1]);
+//        } else {
+//            Utils.changeLocale(this, languageCodes[0]);
             currentResources = Utils.getLocalizedResources(this , languageCodes[0]);
-        }
+//        }
 //        Utils.forceLtrIfSupported(this);
         setContentView(R.layout.activity_start);
-//        String currentLanguage = getSharedPreferences("StartActivity", MODE_PRIVATE).getString("language", language[1]);
-        if (currentLanguage.equals(language[1])) {
-            Utils.changeLocale(this, languageCodes[1]);
-        } else {
-            Utils.changeLocale(this, languageCodes[0]);
-        }
+
         init();
 
         tableNames = DatabaseHelper.getAllTables(this);

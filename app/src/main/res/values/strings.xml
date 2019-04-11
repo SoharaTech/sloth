@@ -1,7 +1,7 @@
 <resources>
 
-    <string name="app_name" translatable="false">دژخیم</string>
-    <string name="hangman">Hangman</string>
+    <string name="app_name" translatable="false">Hangman</string>
+    <string name="hangman">HANGMAN</string>
 
     <string name="hint">Hint</string>
     <string name="translate">Translation</string>
@@ -31,11 +31,11 @@
     <string name="animals">Animals</string>
     <string name="countries">Countries</string>
     <string name="food">Food</string>
-    <string name="sport">Sports</string>
+    <string name="sports">Sports</string>
     <string name="kitchen">Kitchen Utensils</string>
     <string name="clothes_and_accessories">Clothes AND Accessories</string>
     <string name="jobs">Jobs</string>
-    <string name="fruit">Fruits</string>
+    <string name="fruits">Fruits</string>
     <string name="colors">Colors</string>
     <string name="body">Body Organs</string>
     <string name="flowers">Flowers</string>
@@ -57,8 +57,8 @@
 
     <string name="reward_ad_not_loaded">Unable to load reward video! Please try again later!</string>
 
-    <string name="admob_app_id" translatable="false">ca-app-pub-9225557010209066~3045339004</string>
-    <string name="banner_ad" translatable="false">ca-app-pub-9225557010209066/8489237370</string>
-    <string name="interstitial_ad" translatable="false">ca-app-pub-9225557010209066/7555784875</string>
-    <string name="rewarded_video_ad" translatable="false">ca-app-pub-9225557010209066/5605366814</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-9225557010209066~5693900685</string>
+    <string name="banner_ad" translatable="false">ca-app-pub-9225557010209066/5782364744</string>
+    <string name="interstitial_ad" translatable="false">ca-app-pub-9225557010209066/6903874728</string>
+    <string name="rewarded_video_ad" translatable="false">ca-app-pub-9225557010209066/2354255627</string>
 </resources>

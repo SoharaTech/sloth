@@ -1,4 +1,4 @@
-package com.sohara.hangman.Data;
+package com.sohara.enhangman.Data;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.sohara.hangman.BuildConfig;
-import com.sohara.hangman.Models.Word;
+import com.sohara.enhangman.BuildConfig;
+import com.sohara.enhangman.Models.Word;
 
 import java.io.File;
 import java.io.FileOutputStream;

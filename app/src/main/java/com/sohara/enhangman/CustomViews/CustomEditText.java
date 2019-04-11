@@ -1,10 +1,10 @@
-package com.sohara.hangman.CustomViews;
+package com.sohara.enhangman.CustomViews;
 
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 
-import com.sohara.hangman.Helper.Utils;
+import com.sohara.enhangman.Helper.Utils;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
@@ -32,7 +32,7 @@ public class CustomEditText extends AppCompatEditText {
         if (getTag().equals(1))
             tf = Typeface.createFromAsset(getContext().getAssets(), Utils.font1);
         else
-            tf = Typeface.createFromAsset(getContext().getAssets(), Utils.font2);
+            tf = Typeface.createFromAsset(getContext().getAssets(), Utils.font3);
         setTypeface(tf , style);
 
     }

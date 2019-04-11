@@ -21,9 +21,10 @@
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="10.0dip"
+            android:layout_marginBottom="20dp"
             android:visibility="invisible">
 
-            <com.sohara.hangman.CustomViews.CustomTextView
+            <com.sohara.enhangman.CustomViews.CustomTextView
                 android:id="@+id/tvRate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,7 +42,7 @@
                 android:layout_weight="1.0"
                 android:orientation="horizontal">
 
-                <com.sohara.hangman.CustomViews.CustomButton
+                <com.sohara.enhangman.CustomViews.CustomButton
                     android:id="@+id/bRate1"
                     android:layout_width="150.0dip"
                     android:layout_height="35.0dip"
@@ -53,7 +54,7 @@
                     android:textColor="#ffffffff"
                     android:textSize="18.0sp" />
 
-                <com.sohara.hangman.CustomViews.CustomButton
+                <com.sohara.enhangman.CustomViews.CustomButton
                     android:id="@+id/bRate2"
                     android:layout_width="150.0dip"
                     android:layout_height="35.0dip"
@@ -82,7 +83,7 @@
             android:orientation="vertical"
             android:padding="10.0dip">
 
-            <com.sohara.hangman.CustomViews.CustomTextView
+            <com.sohara.enhangman.CustomViews.CustomTextView
                 android:id="@+id/tvStatus"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -90,8 +91,10 @@
                 android:gravity="center_horizontal"
                 android:tag="2"
                 android:text="WRONG!"
+                android:padding="3dp"
+                android:layout_marginBottom="2dp"
                 android:textColor="#ffffffff"
-                android:textSize="40.0sp" />
+                android:textSize="30sp" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -100,15 +103,17 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <com.sohara.hangman.CustomViews.CustomTextView
+                <com.sohara.enhangman.CustomViews.CustomTextView
                     android:id="@+id/tvAnswer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:tag="2"
+                    android:padding="3dp"
+                    android:layout_marginBottom="2dp"
                     android:text="WORD: HANGMAN"
                     android:textColor="#ffffffff"
-                    android:textSize="30.0sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/bFindMore"
@@ -123,7 +128,7 @@
                     android:visibility="gone" />
             </LinearLayout>
 
-            <com.sohara.hangman.CustomViews.CustomTextView
+            <com.sohara.enhangman.CustomViews.CustomTextView
                 android:id="@+id/tvTranslation"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -131,46 +136,50 @@
                 android:gravity="center_horizontal"
                 android:padding="3.0dip"
                 android:tag="2"
+                android:visibility="gone"
                 android:text="Translation: 0"
                 android:textColor="#ffffffff"
                 android:textIsSelectable="false"
-                android:textSize="30sp" />
+                android:textSize="22sp" />
 
-            <com.sohara.hangman.CustomViews.CustomTextView
+            <com.sohara.enhangman.CustomViews.CustomTextView
                 android:id="@+id/tvSolved"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
+                android:layout_marginBottom="2dp"
                 android:gravity="center_horizontal"
                 android:padding="3.0dip"
                 android:tag="2"
                 android:text="SOLVED PUZZLES: 0"
                 android:textColor="#ffffffff"
                 android:textIsSelectable="false"
-                android:textSize="30sp" />
+                android:textSize="22sp" />
 
-            <com.sohara.hangman.CustomViews.CustomTextView
+            <com.sohara.enhangman.CustomViews.CustomTextView
                 android:id="@+id/tvScore"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
+                android:layout_marginBottom="2dp"
                 android:gravity="center_horizontal"
                 android:padding="3.0dip"
                 android:tag="2"
                 android:text="SCORE: 0"
                 android:textColor="#ffffffff"
-                android:textSize="30sp" />
+                android:textSize="22sp" />
 
-            <com.sohara.hangman.CustomViews.CustomTextView
+            <com.sohara.enhangman.CustomViews.CustomTextView
                 android:id="@+id/tvHint"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
+                android:padding="3dp"
                 android:gravity="center_horizontal"
                 android:tag="2"
                 android:text="@string/new_hint"
                 android:textColor="#ffffffff"
-                android:textSize="25.0sp"
+                android:textSize="20sp"
                 android:visibility="gone" />
 
             <LinearLayout
@@ -180,18 +189,18 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-                <com.sohara.hangman.CustomViews.CustomButton
+                <com.sohara.enhangman.CustomViews.CustomButton
                     android:id="@+id/bNextPuzzle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10.0dip"
+                    android:layout_marginTop="20.0dip"
                     android:layout_weight="1.0"
                     android:background="@drawable/button_round"
                     android:paddingLeft="30.0dip"
                     android:paddingRight="30.0dip"
                     android:tag="2"
                     android:text="@string/next_puzzle"
-                    android:textSize="40sp" />
+                    android:textSize="26sp" />
             </LinearLayout>
         </LinearLayout>
 
