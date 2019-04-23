@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.sohara.enhangman.Data.DataContract;
 import com.sohara.enhangman.Helper.PersianNumber;
 import com.sohara.enhangman.Helper.Utils;
@@ -193,6 +195,18 @@ public class FinishActivity
         statusImage = findViewById(R.id.status_image);
         statusImage.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
         tvHint.setText(persianNumber.toPersianNumber(getString(R.string.new_hint)));
+        initAdMob();
+    }
+
+    AdView mAdView;
+    private void initAdMob() {
+
+        mAdView = findViewById(R.id.adView);
+        //if (isVisibleToUser) {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        mAdView.setLayerType(AdView.LAYER_TYPE_SOFTWARE, null); //instead of LAYER_TYPE_HARDWARE
     }
 }
 
