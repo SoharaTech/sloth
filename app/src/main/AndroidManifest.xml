@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.sohara.enhangman.GameActivity" />
+        <activity android:name=".FinishCategoryActivity" />
     </application>
 
 </manifest>

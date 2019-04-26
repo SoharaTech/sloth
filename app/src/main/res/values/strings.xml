@@ -15,6 +15,8 @@
     <string name="next_puzzle">Next Puzzle</string>
     <string name="solved_puzzles">Solved Puzzles:</string>
 
+    <string name="finish_category">Congratulations!\n\nYou\'ve finished this category!</string>
+    <string name="return_to_first_page">return to home page</string>
     <string name="no_more_translation">There are no more translations!</string>
     <string name="no_more_hint">There are no more hints!</string>
     <string name="choose_language">Choose Language:</string>

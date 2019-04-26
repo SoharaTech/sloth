@@ -47,6 +47,9 @@
     <string name="yes">آره!</string>
     <string name="not_really">نه خیلی!</string>
 
+    <string name="finish_category">تبریک!\n\nشما کلمات این دسته را به پایان رسانده اید!</string>
+
+    <string name="return_to_first_page">بازگشت به صفحه اصلی</string>
     <string name="exit_message">مطمئنی میخوای از این صفحه خارج بشی؟</string>
     <string name="no">نه!</string>
     <string name="language">زبان</string>
