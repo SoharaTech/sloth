@@ -495,11 +495,20 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         category = prefs.getString("category", StartActivity.tableNames.get(0));
 
         item = PrepareWord.getWord(getApplicationContext(), category);
-        word = PrepareWord.getWordByLanguage(item).toUpperCase().trim();
+        if(item != null) {
+            word = PrepareWord.getWordByLanguage(item).toUpperCase().trim();
+            translation = PrepareWord.getTranslation(item);
+        }
+        else
+        {
+            Intent intent = new Intent(this , FinishCategoryActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
 
         hiddenWord = PrepareWord.prepare(word);
-        translation = PrepareWord.getTranslation(item);
+
         tvCategory.setText(Utils.getStringResourceID(getApplicationContext(), category.toLowerCase()));
         tvWord.setText(hiddenWord);
         tvScore.setText(persianNumber.toPersianNumber(String.valueOf(score)));
