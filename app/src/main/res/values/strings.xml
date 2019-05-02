@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name" translatable="false">Hangman</string>
+    <string name="app_name" translatable="false">Hangman Free</string>
     <string name="hangman">HANGMAN</string>
 
     <string name="hint">Hint</string>
@@ -15,6 +15,7 @@
     <string name="next_puzzle">Next Puzzle</string>
     <string name="solved_puzzles">Solved Puzzles:</string>
 
+    <string name="privacy_policy_url" translatable="false">http://198.143.180.134:8585/hangman/privacy_policy.html</string>
     <string name="finish_category">Congratulations!\n\nYou\'ve finished this category!</string>
     <string name="return_to_first_page">return to home page</string>
     <string name="no_more_translation">There are no more translations!</string>

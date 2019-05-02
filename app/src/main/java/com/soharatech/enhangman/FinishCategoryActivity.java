@@ -1,4 +1,4 @@
-package com.sohara.enhangman;
+package com.soharatech.enhangman;
 
 import android.os.Bundle;
 import android.view.View;

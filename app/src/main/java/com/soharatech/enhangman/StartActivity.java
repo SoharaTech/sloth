@@ -1,4 +1,4 @@
-package com.sohara.enhangman;
+package com.soharatech.enhangman;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -18,19 +18,18 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.sohara.enhangman.Data.DataContract;
-import com.sohara.enhangman.Data.DatabaseHelper;
-import com.sohara.enhangman.Helper.PersianNumber;
-import com.sohara.enhangman.Helper.Utils;
+import com.soharatech.enhangman.Data.DatabaseHelper;
+import com.soharatech.enhangman.Helper.PersianNumber;
+import com.soharatech.enhangman.Helper.Utils;
 
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -60,6 +59,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     TextView tvPoints;
     String TAG = "StartActivity";
     Resources currentResources;
+    LinearLayout privacyPolicyLayout;
 //    TextView tvDifficulty;
 
 
@@ -164,6 +164,10 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId()) {
             default:
                 return;
+            case R.id.privacy_policy_layout:
+                Intent intent = new Intent(this, PrivacyPolicyActivity.class);
+                startActivity(intent);
+                break;
             case R.id.bCategories:
                 showCategoriesDialog();
                 return;
@@ -198,17 +202,12 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         String currentLanguage = getSharedPreferences("StartActivity", MODE_PRIVATE).getString("language", language[0]);
-//        if (currentLanguage.equals(language[1])) {
-//            Utils.changeLocale(this, languageCodes[1]);
-//            currentResources = Utils.getLocalizedResources(this , languageCodes[1]);
-//        } else {
-//            Utils.changeLocale(this, languageCodes[0]);
-            currentResources = Utils.getLocalizedResources(this , languageCodes[0]);
-//        }
-//        Utils.forceLtrIfSupported(this);
+
+        currentResources = Utils.getLocalizedResources(this, languageCodes[0]);
         setContentView(R.layout.activity_start);
 
         init();
+        Utils.forceLtrIfSupported(this);
 
         tableNames = DatabaseHelper.getAllTables(this);
 
@@ -217,6 +216,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
             ibNoSound.setVisibility(View.INVISIBLE);
         }
 
+        privacyPolicyLayout.setOnClickListener(this);
         bCategories.setOnClickListener(this);
         bLanguage.setOnClickListener(this);
 //            bDifficulty.setOnClickListener(this);
@@ -244,6 +244,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         ibSound = findViewById(R.id.ibSound);
         ibNoSound = findViewById(R.id.ibClose);
         tvPoints = findViewById(R.id.tvPoints);
+        privacyPolicyLayout = findViewById(R.id.privacy_policy_layout);
 
         initAdMob();
     }

@@ -1,10 +1,10 @@
-package com.sohara.enhangman.Models;
+package com.soharatech.enhangman.Models;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.sohara.enhangman.Data.DatabaseHelper;
-import com.sohara.enhangman.StartActivity;
+import com.soharatech.enhangman.Data.DatabaseHelper;
+import com.soharatech.enhangman.StartActivity;
 
 import java.util.ArrayList;
 import java.util.Random;

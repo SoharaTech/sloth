@@ -1,4 +1,4 @@
-package com.sohara.enhangman;
+package com.soharatech.enhangman;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -31,10 +31,10 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
-import com.sohara.enhangman.Helper.PersianNumber;
-import com.sohara.enhangman.Helper.Utils;
-import com.sohara.enhangman.Models.PrepareWord;
-import com.sohara.enhangman.Models.Word;
+import com.soharatech.enhangman.Helper.PersianNumber;
+import com.soharatech.enhangman.Helper.Utils;
+import com.soharatech.enhangman.Models.PrepareWord;
+import com.soharatech.enhangman.Models.Word;
 
 import java.util.Arrays;
 import java.util.List;
@@ -297,31 +297,31 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     AlertDialog.Builder localBuilder;
 
     private void hintPopup() {
-        if (!rate) {
-            localBuilder = new AlertDialog.Builder(this);
-            localBuilder.setMessage(getString(R.string.rate_message)).setCancelable(false).setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialogInterface, int paramAnonymousInt) {
-                    share = 1;
-                    rate = true;
-                    dialogInterface.dismiss();
-                    try {
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(
-                                "https://play.google.com/store/apps/details?id=" + getPackageName()));
-                        intent.setPackage("com.android.vending");
-                        startActivity(intent);
-                    } catch (Exception e) {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
-                    }
-                }
-            }).setNegativeButton(getString(R.string.no_thanks), new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialogInterface, int paramAnonymousInt) {
-                    dialogInterface.cancel();
-                }
-            });
-            localBuilder.create().show();
-            return;
-        }
+//        if (!rate) {
+//            localBuilder = new AlertDialog.Builder(this);
+//            localBuilder.setMessage(getString(R.string.rate_message)).setCancelable(false).setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
+//                public void onClick(DialogInterface dialogInterface, int paramAnonymousInt) {
+//                    share = 1;
+//                    rate = true;
+//                    dialogInterface.dismiss();
+//                    try {
+//                        Intent intent = new Intent(Intent.ACTION_VIEW);
+//                        intent.setData(Uri.parse(
+//                                "https://play.google.com/store/apps/details?id=" + getPackageName()));
+//                        intent.setPackage("com.android.vending");
+//                        startActivity(intent);
+//                    } catch (Exception e) {
+//                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
+//                    }
+//                }
+//            }).setNegativeButton(getString(R.string.no_thanks), new DialogInterface.OnClickListener() {
+//                public void onClick(DialogInterface dialogInterface, int paramAnonymousInt) {
+//                    dialogInterface.cancel();
+//                }
+//            });
+//            localBuilder.create().show();
+//            return;
+//        }
         AlertDialog.Builder localBuilder = new AlertDialog.Builder(this);
         localBuilder.setMessage(getString(R.string.share_message)).setCancelable(false).setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialogInterface, int paramAnonymousInt) {
@@ -554,24 +554,24 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     protected void onResume() {
         super.onResume();
         if (share == 2) {
-            if (rate) {
+//            if (rate) {
+//                Toast.makeText(this, getString(R.string.hint_award_5), Toast.LENGTH_SHORT).show();
+//                share = 0;
+//                no_hint += 5;
+//                editor = getSharedPreferences("StartActivity", 0).edit();
+//                editor.putInt("no_hint", no_hint);
+//                editor.putBoolean("rate", true);
+//                editor.apply();
+//                bHint.setText(persianNumber.toPersianNumber(getString(R.string.hint) + " (" + no_hint + ")"));
+//            } else {
                 Toast.makeText(this, getString(R.string.hint_award_5), Toast.LENGTH_SHORT).show();
                 share = 0;
                 no_hint += 5;
                 editor = getSharedPreferences("StartActivity", 0).edit();
                 editor.putInt("no_hint", no_hint);
-                editor.putBoolean("rate", true);
                 editor.apply();
                 bHint.setText(persianNumber.toPersianNumber(getString(R.string.hint) + " (" + no_hint + ")"));
-            } else {
-                Toast.makeText(this, getString(R.string.hint_award_5), Toast.LENGTH_SHORT).show();
-                share = 0;
-                no_hint += 5;
-                editor = getSharedPreferences("StartActivity", 0).edit();
-                editor.putInt("no_hint", no_hint);
-                editor.apply();
-                bHint.setText(persianNumber.toPersianNumber(getString(R.string.hint) + " (" + no_hint + ")"));
-            }
+//            }
         }
 
     }

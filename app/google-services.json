@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:724639635565:android:eeffa7513453bdaa",
+        "mobilesdk_app_id": "1:724639635565:android:1d735f0c8b4949cd",
         "android_client_info": {
-          "package_name": "com.sohara.enhangman"
+          "package_name": "com.sohara.hangman"
         }
       },
       "oauth_client": [
@@ -37,9 +37,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:724639635565:android:1d735f0c8b4949cd",
+        "mobilesdk_app_id": "1:724639635565:android:0371f3595b379084",
         "android_client_info": {
-          "package_name": "com.sohara.hangman"
+          "package_name": "com.soharatech.enhangman"
         }
       },
       "oauth_client": [

@@ -1,4 +1,4 @@
-package com.sohara.enhangman.Helper;
+package com.soharatech.enhangman.Helper;
 
 import android.app.Activity;
 import android.content.Context;

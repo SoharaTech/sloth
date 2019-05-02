@@ -1,10 +1,10 @@
-package com.sohara.enhangman.CustomViews;
+package com.soharatech.enhangman.CustomViews;
 
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 
-import com.sohara.enhangman.Helper.Utils;
+import com.soharatech.enhangman.Helper.Utils;
 
 import androidx.appcompat.widget.AppCompatEditText;
 

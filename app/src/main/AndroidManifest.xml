@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sohara.enhangman">
+    package="com.soharatech.enhangman">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_new"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_new"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.sohara.enhangman.FinishActivity" />
-        <activity android:name="com.sohara.enhangman.StartActivity">
+        <activity android:name="com.soharatech.enhangman.FinishActivity" />
+        <activity android:name="com.soharatech.enhangman.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.sohara.enhangman.GameActivity" />
-        <activity android:name=".FinishCategoryActivity" />
+        <activity android:name="com.soharatech.enhangman.GameActivity" />
+        <activity android:name="com.soharatech.enhangman.FinishCategoryActivity" />
+        <activity android:name="com.soharatech.enhangman.PrivacyPolicyActivity" />
     </application>
 
 </manifest>
