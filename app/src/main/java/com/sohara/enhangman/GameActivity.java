@@ -1,4 +1,4 @@
-package com.soharatech.enhangman;
+package com.sohara.enhangman;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -9,7 +9,6 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -31,10 +30,10 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
-import com.soharatech.enhangman.Helper.PersianNumber;
-import com.soharatech.enhangman.Helper.Utils;
-import com.soharatech.enhangman.Models.PrepareWord;
-import com.soharatech.enhangman.Models.Word;
+import com.sohara.enhangman.Helper.PersianNumber;
+import com.sohara.enhangman.Helper.Utils;
+import com.sohara.enhangman.Models.PrepareWord;
+import com.sohara.enhangman.Models.Word;
 
 import java.util.Arrays;
 import java.util.List;

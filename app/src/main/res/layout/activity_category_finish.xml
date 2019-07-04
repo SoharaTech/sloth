@@ -47,7 +47,7 @@
         android:layout_centerVertical="true"
         android:orientation="vertical">
 
-        <com.soharatech.enhangman.CustomViews.CustomTextView
+        <com.sohara.enhangman.CustomViews.CustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="80dp"
@@ -58,7 +58,7 @@
             android:textColor="@android:color/white"
             android:textSize="20sp" />
 
-        <com.soharatech.enhangman.CustomViews.CustomButton
+        <com.sohara.enhangman.CustomViews.CustomButton
             android:id="@+id/bReturn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

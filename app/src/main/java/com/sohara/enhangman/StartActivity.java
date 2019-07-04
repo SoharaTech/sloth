@@ -1,4 +1,4 @@
-package com.soharatech.enhangman;
+package com.sohara.enhangman;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -25,9 +25,9 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.soharatech.enhangman.Data.DatabaseHelper;
-import com.soharatech.enhangman.Helper.PersianNumber;
-import com.soharatech.enhangman.Helper.Utils;
+import com.sohara.enhangman.Data.DatabaseHelper;
+import com.sohara.enhangman.Helper.PersianNumber;
+import com.sohara.enhangman.Helper.Utils;
 
 import java.util.ArrayList;
 

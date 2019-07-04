@@ -1,4 +1,4 @@
-package com.soharatech.enhangman;
+package com.sohara.enhangman;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package com.soharatech.enhangman.Data;
+package com.sohara.enhangman.Data;
 
 import android.provider.BaseColumns;
 

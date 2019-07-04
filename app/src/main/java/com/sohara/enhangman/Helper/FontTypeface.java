@@ -1,4 +1,4 @@
-package com.soharatech.enhangman.Helper;
+package com.sohara.enhangman.Helper;
 
 import android.content.Context;
 import android.graphics.Typeface;

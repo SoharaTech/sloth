@@ -1,4 +1,4 @@
-package com.soharatech.enhangman;
+package com.sohara.enhangman;
 
 import org.junit.Test;
 

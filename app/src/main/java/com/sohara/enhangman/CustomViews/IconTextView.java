@@ -1,4 +1,4 @@
-package com.soharatech.enhangman.CustomViews;
+package com.sohara.enhangman.CustomViews;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,7 +6,7 @@ import android.view.Gravity;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
-import com.soharatech.enhangman.Helper.FontTypeface;
+import com.sohara.enhangman.Helper.FontTypeface;
 
 
 public class IconTextView extends AppCompatTextView {

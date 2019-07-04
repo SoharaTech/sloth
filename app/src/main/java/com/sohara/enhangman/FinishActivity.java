@@ -1,4 +1,4 @@
-package com.soharatech.enhangman;
+package com.sohara.enhangman;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -18,10 +18,10 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.soharatech.enhangman.Helper.PersianNumber;
-import com.soharatech.enhangman.Helper.Utils;
-import com.soharatech.enhangman.Models.PrepareWord;
-import com.soharatech.enhangman.Models.Word;
+import com.sohara.enhangman.Helper.PersianNumber;
+import com.sohara.enhangman.Helper.Utils;
+import com.sohara.enhangman.Models.PrepareWord;
+import com.sohara.enhangman.Models.Word;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
